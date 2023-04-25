@@ -1,0 +1,26 @@
+-- Objectives: 
+-- Create your own store! Your store should sell one type of things, like clothing or bikes, whatever you want your store to specialize in. 
+-- You should have a table for all the items in your store, and at least 5 columns for the kind of data you think you'd need to store. 
+-- You should sell at least 15 items, and use select statements to order your items by price and show at least one statistic about the items.
+
+CREATE TABLE cosmetics_store (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, inventory INTEGER, aisle INTEGER);
+
+INSERT INTO cosmetics_store VALUES(1, "Mascara", 13, 30, 2);
+INSERT INTO cosmetics_store VALUES(2, "Eyeliner", 10, 75, 2);
+INSERT INTO cosmetics_store VALUES(3, "Lip Liner", 4, 60, 5);
+INSERT INTO cosmetics_store VALUES(4, "Lipstick", 9, 45, 5);
+INSERT INTO cosmetics_store VALUES(5, "Lip Gloss", 6, 72, 5);
+INSERT INTO cosmetics_store VALUES(6, "Eyeshadow Palette", 17, 20, 6);
+INSERT INTO cosmetics_store VALUES(7, "Foundation", 14, 90, 1);
+INSERT INTO cosmetics_store VALUES(8, "Concealer", 11, 103, 1);
+INSERT INTO cosmetics_store VALUES(9, "Pressed Powder", 6, 36, 1);
+INSERT INTO cosmetics_store VALUES(10, "Loose Powder", 7, 33, 1);
+INSERT INTO cosmetics_store VALUES(11, "Primer", 8, 36, 3);
+INSERT INTO cosmetics_store VALUES(12, "Blush", 5, 47, 3);
+INSERT INTO cosmetics_store VALUES(13, "Contour Stick", 6, 62, 3);
+INSERT INTO cosmetics_store VALUES(14, "Highlighter", 4, 36, 3);
+INSERT INTO cosmetics_store VALUES(15, "Nail Polish", 2, 45, 4);
+
+SELECT item, price FROM cosmetics_store ORDER BY price desc; 
+
+SELECT SUM(inventory) FROM cosmetics_store;
